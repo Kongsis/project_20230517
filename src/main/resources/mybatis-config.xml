@@ -3,6 +3,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.icia.member.dto.MemberDTO" alias="member"></typeAlias>
+        <typeAlias type="com.icia.bookstore.dto.MemberDTO" alias="member"></typeAlias>
     </typeAliases>
 </configuration>

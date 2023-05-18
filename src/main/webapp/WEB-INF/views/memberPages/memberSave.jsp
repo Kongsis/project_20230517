@@ -71,7 +71,7 @@
     const password_check = () => {
         const password = document.getElementById("member-password").value;
         const passwordResult = document.getElementById("password-result");
-        const exp = /^[a-z\d][A-Z\d][0-9\d][!#$-_]{6,20}$/;
+        const exp = /^(?=.*[a-z])(?=.*\d)(?=.*[-_!#])[a-zA-Z\d-_!#]{6,20}$/;
         if(password.length == 0) {
             passwordResult.innerHTML = "필수입력입니다.";
             passwordResult.style.color = "red";
@@ -81,7 +81,7 @@
             passwordResult.style.color = "green";
             return true;
         } else {
-            passwordResult.innerHTML = "6~20글자, 영문대/소문자 필수, 숫자 필수, 특수문자 필수(!#$-_)만 가능합니다.";
+            passwordResult.innerHTML = "6~20글자, 영문 소문자 필수, 숫자 필수, 특수문자 필수(!#-_)만 가능합니다.";
             passwordResult.style.color = "red";
             return false;
         }
@@ -131,9 +131,6 @@
         } else if (num.length === 11) {
             mobile.value = num.replace(regex, "$1-$2-$3");
             return true;
-        } else {
-            mobileResult.innerHTML = "형식에 맞게 작성해주세요.";
-            mobileResult.style.color = "red";
         }
     }
 

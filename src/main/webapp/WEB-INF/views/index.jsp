@@ -9,8 +9,13 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="/resources/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <h2>index.jsp</h2>
+<%@include file="./component/header.jsp"%>
+<%@include file="./component/nav.jsp"%>
+    <a href="/member/save">회원가입</a>
+<%@include file="./component/footer.jsp"%>
 </body>
 </html>
