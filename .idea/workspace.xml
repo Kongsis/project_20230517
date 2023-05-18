@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="setting">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/hahahah.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="haha">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +168,7 @@
       <workItem from="1684375776590" duration="57000" />
       <workItem from="1684375860514" duration="37000" />
       <workItem from="1684375921223" duration="40000" />
-      <workItem from="1684376903870" duration="382000" />
+      <workItem from="1684376903870" duration="467000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <created>1684299308936</created>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684376997416</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="haha">
+      <created>1684377297874</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684377297874</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +239,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="README" />
     <MESSAGE value="setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting" />
+    <MESSAGE value="haha" />
+    <option name="LAST_COMMIT_MESSAGE" value="haha" />
   </component>
 </project>
