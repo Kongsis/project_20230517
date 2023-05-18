@@ -15,7 +15,7 @@
 <body>
 <%@include file="./component/header.jsp"%>
 <%@include file="./component/nav.jsp"%>
-    <a href="/member/save">회원가입</a>
+
 <%@include file="./component/footer.jsp"%>
 </body>
 </html>

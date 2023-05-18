@@ -60,4 +60,47 @@ public class MemberController {
         session.invalidate();
         return "redirect:/";
     }
+
+    @GetMapping("/myPage")
+    public String myPage(@RequestParam("member-email") String loginEmail, Model model) {
+        MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
+        model.addAttribute("member", memberDTO);
+        return "/memberPages/memberMypage";
+    }
+
+    @GetMapping("/updatePassword")
+    public String passUpdateForm(HttpSession session, Model model){
+        String loginEmail = (String)session.getAttribute("loginEmail");
+        MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
+        model.addAttribute("member", memberDTO);
+        return "/memberPages/passwordCheck";
+    }
+
+    @PostMapping("/updatePassword")
+    public String updatePass(HttpSession session, Model model){
+        String loginEmail = (String)session.getAttribute("loginEmail");
+        MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
+        model.addAttribute("member", memberDTO);
+        return "/memberPages/memberUpdate";
+    }
+
+    @GetMapping("/update")
+    public String updateForm(HttpSession session, Model model) {
+        String loginEmail = (String)session.getAttribute("loginEmail");
+        MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
+        model.addAttribute("member", memberDTO);
+        return "memberPages/memberUpdate";
+    }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute MemberDTO memberDTO) {
+        memberService.update(memberDTO);
+        return "redirect:/";
+    }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id) {
+        memberService.delete(id);
+        return "redirect:/";
+    }
 }
