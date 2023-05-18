@@ -14,9 +14,6 @@
     <li>
       <a href="/member/login">로그인</a>
     </li>
-    <li>
-      <a href="/board/list">글목록</a>
-    </li>
     <li class="login-name" id="login-area">
 
     </li>

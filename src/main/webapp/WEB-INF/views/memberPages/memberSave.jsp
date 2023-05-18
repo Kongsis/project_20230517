@@ -48,6 +48,7 @@
                 "member-email": email
             },
             success: function () {
+                console.log(email);
                 if (email.length == 0) {
                     result.innerHTML = "필수정보입니다.";
                     result.style.color = "red";
@@ -61,6 +62,7 @@
                 }
             },
             error: function () {
+                console.log(email);
                 result.innerHTML = "사용중인 이메일입니다.";
                 result.style.color = "red";
             }
@@ -160,6 +162,5 @@
             return true;
         }
     }
-
 </script>
 </html>

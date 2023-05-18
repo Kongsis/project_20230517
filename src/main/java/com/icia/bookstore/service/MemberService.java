@@ -5,6 +5,8 @@ import com.icia.bookstore.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Member;
+
 @Service
 public class MemberService {
     @Autowired
@@ -14,5 +16,16 @@ public class MemberService {
         return memberRepository.save(memberDTO);
     }
 
-    save
+    public MemberDTO findByMemberEmail(String loginEmail) {
+        return memberRepository.findByMemberEmail(loginEmail);
+    }
+
+    public boolean login(MemberDTO memberDTO) {
+        MemberDTO dto = memberRepository.login(memberDTO);
+        if (dto != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

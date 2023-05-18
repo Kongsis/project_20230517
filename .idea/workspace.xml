@@ -10,7 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="haha">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/response/loginError.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/hahahah.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/MemberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/member-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/member-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -50,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/springframework/project_20230517",
+    "last_opened_file_path": "D:/springframework/project_20230517/src/main/webapp/WEB-INF/views/response",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +72,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\response" />
       <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF" />
     </key>
   </component>
@@ -77,7 +88,9 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="09fe81db-9a01-4ab2-8333-59ebc9e0117d" />
+        <option name="BASE_DIRECTORY_NAME" value="44b1f931-f879-4c40-8b97-c91053753a37" />
+        <option name="HTTP_PORT" value="8090" />
+        <option name="JNDI_PORT" value="1095" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -85,7 +98,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51243" />
+        <option name="DEBUG_PORT" value="56964" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -168,7 +181,7 @@
       <workItem from="1684375776590" duration="57000" />
       <workItem from="1684375860514" duration="37000" />
       <workItem from="1684375921223" duration="40000" />
-      <workItem from="1684376903870" duration="467000" />
+      <workItem from="1684376903870" duration="10826000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <created>1684299308936</created>
@@ -219,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684377297874</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="haha">
+      <created>1684377389318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684377389318</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
