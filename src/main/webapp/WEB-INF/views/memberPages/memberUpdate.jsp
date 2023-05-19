@@ -24,7 +24,6 @@
             <input type="text" name="memberEmail" value="${member.memberEmail}" readonly placeholder="이메일"> <br>
             <input type="text" name="memberPassword" id="memberPassword" value="${member.memberPassword}" placeholder="비밀번호"> <br>
             <input type="text" name="memberName" value="${member.memberName}" placeholder="이름"> <br>
-<%--            <input type="text" name="memberMobile" value="${member.memberMobile}" placeholder="전화번호(숫자만입력)"> <br>--%>
             <input type="text" id="member-mobile" onblur="mobile_reCheck()" value="${member.memberMobile}" maxlength="11" name="memberMobile" placeholder="전화번호(숫자만입력)"> <br>
             <input type="hidden" name="memberAddress" id="memberAddress" value="${member.memberAddress}">
             <div style="display: inline-block">
