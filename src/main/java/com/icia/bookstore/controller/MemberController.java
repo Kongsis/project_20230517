@@ -69,7 +69,7 @@ public class MemberController {
     }
 
     @GetMapping("/updatePassword")
-    public String passUpdateForm(HttpSession session, Model model){
+    public String passUpdateForm(HttpSession session, Model model) {
         String loginEmail = (String)session.getAttribute("loginEmail");
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
         model.addAttribute("member", memberDTO);
@@ -77,7 +77,7 @@ public class MemberController {
     }
 
     @PostMapping("/updatePassword")
-    public String updatePass(HttpSession session, Model model){
+    public String updatePass(HttpSession session, Model model) {
         String loginEmail = (String)session.getAttribute("loginEmail");
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
         model.addAttribute("member", memberDTO);
@@ -98,9 +98,24 @@ public class MemberController {
         return "redirect:/";
     }
 
-    @GetMapping("/delete")
-    public String delete(@RequestParam("id") Long id) {
-        memberService.delete(id);
+    @GetMapping("/deleteCheck")
+    public String deleteCheck(@RequestParam("id") Long id, Model model) {
+        MemberDTO memberDTO = memberService.findById(id);
+        model.addAttribute("member", memberDTO);
+        return "/memberPages/memberDelete";
+    }
+
+//    @PostMapping("/delete")
+//    public String delete(@RequestParam("id") Long id) {
+//        System.out.println("controller 확인2"+id);
+//        memberService.delete(id);
+//        return "redirect:/";
+//    }
+
+    @PostMapping("/delete")
+    public String delete(@ModelAttribute MemberDTO memberDTO) {
+        System.out.println("controller 확인2"+memberDTO);
+        memberService.delete(memberDTO);
         return "redirect:/";
     }
 }

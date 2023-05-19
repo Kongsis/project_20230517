@@ -29,7 +29,7 @@
         where id=#{id}
     </update>
 
-    <delete id="delete" parameterType="Long">
+    <delete id="delete" parameterType="member">
         delete from member_table where id = #{id}
     </delete>
 </mapper>
