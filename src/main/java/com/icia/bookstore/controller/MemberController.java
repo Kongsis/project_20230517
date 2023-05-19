@@ -62,7 +62,7 @@ public class MemberController {
     }
 
     @GetMapping("/myPage")
-    public String myPage(@RequestParam("member-email") String loginEmail, Model model) {
+    public String myPage(@RequestParam("loginEmail") String loginEmail, Model model) {
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
         model.addAttribute("member", memberDTO);
         return "/memberPages/memberMypage";
