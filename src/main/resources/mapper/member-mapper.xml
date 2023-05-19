@@ -4,8 +4,8 @@
 
 <mapper namespace="Member">
     <insert id="save" parameterType="member">
-        insert into member_table(memberEmail, memberPassword, memberName, memberMobile)
-        values(#{memberEmail}, #{memberPassword}, #{memberName}, #{memberMobile})
+        insert into member_table(memberEmail, memberPassword, memberName, memberMobile, memberAddress)
+        values(#{memberEmail}, #{memberPassword}, #{memberName}, #{memberMobile}, #{memberAddress})
     </insert>
 
     <select id="findByMemberEmail" parameterType="String" resultType="member">
@@ -25,7 +25,7 @@
     </select>
 
     <update id="update" parameterType="member">
-        update member_table set memberPassword=#{memberPassword}, memberName=#{memberName}, memberMobile=#{memberMobile}
+        update member_table set memberPassword=#{memberPassword}, memberName=#{memberName}, memberMobile=#{memberMobile}, memberAddress=#{memberAddress}
         where id=#{id}
     </update>
 

@@ -30,7 +30,6 @@ public class MemberController {
 
     @PostMapping("/email-check")
     public ResponseEntity emailCheck(@RequestParam("member-email") String memberEmail){
-        System.out.println("member-email = " + memberEmail);
         MemberDTO memberDTO =memberService.findByMemberEmail(memberEmail);
         if(memberDTO == null){
             return new ResponseEntity(HttpStatus.OK);
@@ -102,20 +101,13 @@ public class MemberController {
     public String deleteCheck(@RequestParam("id") Long id, Model model) {
         MemberDTO memberDTO = memberService.findById(id);
         model.addAttribute("member", memberDTO);
-        return "/memberPages/memberDelete";
+        return "memberPages/memberDelete";
     }
 
-//    @PostMapping("/delete")
-//    public String delete(@RequestParam("id") Long id) {
-//        System.out.println("controller 확인2"+id);
-//        memberService.delete(id);
-//        return "redirect:/";
-//    }
-
-    @PostMapping("/delete")
-    public String delete(@ModelAttribute MemberDTO memberDTO) {
-        System.out.println("controller 확인2"+memberDTO);
-        memberService.delete(memberDTO);
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id, HttpSession session) {
+        memberService.delete(id);
+        session.invalidate();
         return "redirect:/";
     }
 }

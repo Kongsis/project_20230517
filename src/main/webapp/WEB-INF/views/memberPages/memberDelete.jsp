@@ -18,25 +18,23 @@
 <%@include file="../component/nav.jsp"%>
 <div id="section">
     <h2>비밀번호 확인</h2>
-    <form action="/member/delete" method="post" name="deleteForm">
-        <input type="text" name="memberPassword" id="memberPassword" placeholder="현재 비밀번호"><br>
-        <input type="button" onclick="pass_check()" value="확인">
-<%--        <button onclick="pass_check()">확인</button>--%>
-    </form>
+<%--    <form action="/member/delete" method="post" name="deleteForm">--%>
+        <input type="text" id="member-pass" placeholder="비밀번호를 입력하세요"> <br>
+        <td><button onclick="pass_check()">확인</button></td>
+<%--    </form>--%>
 </div>
 <%@include file="../component/footer.jsp"%>
 </body>
 <script>
     const pass_check = () => {
-        const inputPass = document.getElementById("memberPassword").value;
-        const DBPass = '${member.memberPassword}';
-        if (inputPass == DBPass) {
-            document.deleteForm.submit();
-            alert("회원탈퇴 되셨습니다");
-            location.href="/member/logout";
-
+        const passInput = document.getElementById("member-pass").value;
+        const passDB = '${member.memberPassword}';
+        const id = '${member.id}';
+        if(passInput == passDB) {
+            location.href = "/member/delete?id="+id;
+            alert("회원탈퇴 되셨습니다.");
         } else {
-            alert("비밀번호가 일치하지 않습니다");
+            alert("비밀번호가 일치하지 않습니다.");
         }
     }
 </script>
