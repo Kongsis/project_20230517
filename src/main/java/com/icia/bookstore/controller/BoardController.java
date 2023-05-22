@@ -1,9 +1,8 @@
 package com.icia.bookstore.controller;
 
-import com.icia.bookstore.dto.BoardDTO;
-import com.icia.bookstore.dto.BoardFileDTO;
-import com.icia.bookstore.dto.MemberDTO;
+import com.icia.bookstore.dto.*;
 import com.icia.bookstore.service.BoardService;
+import com.icia.bookstore.service.CommentService;
 import com.icia.bookstore.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
