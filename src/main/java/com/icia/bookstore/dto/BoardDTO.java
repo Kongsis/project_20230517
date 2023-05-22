@@ -14,6 +14,7 @@ import java.util.List;
 public class BoardDTO {
     private Long id;
     private String boardTitle;
+    private String boardWriter;
     private String boardContents;
     private int boardPrice;
     private int boardAccount;
