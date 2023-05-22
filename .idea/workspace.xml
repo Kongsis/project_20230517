@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="memberDelete2">
+    <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="memberSave ok">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/ProductDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/MemberFileDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/ProductFileDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,6 +67,9 @@
       <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\memberPages" />
       <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\response" />
       <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.icia.bookstore.dto" />
     </key>
   </component>
   <component name="RunManager">
@@ -175,7 +179,7 @@
       <workItem from="1684375921223" duration="40000" />
       <workItem from="1684376903870" duration="13680000" />
       <workItem from="1684469171540" duration="19842000" />
-      <workItem from="1684712100122" duration="2345000" />
+      <workItem from="1684712100122" duration="3647000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <created>1684299308936</created>
@@ -275,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684496329013</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="memberSave ok">
+      <created>1684714501925</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684714501925</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +312,7 @@
     <MESSAGE value="memberUpdatePage" />
     <MESSAGE value="memberDelete" />
     <MESSAGE value="memberDelete2" />
-    <option name="LAST_COMMIT_MESSAGE" value="memberDelete2" />
+    <MESSAGE value="memberSave ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="memberSave ok" />
   </component>
 </project>
