@@ -219,7 +219,10 @@
         const passwordConfirm = document.getElementById("password-confirm");
         const name = document.getElementById("member-name");
         const mobile = document.getElementById("member-mobile");
-        // const address = document.getElementById("memberAddress");
+        const postcode = document.getElementById("sample6_postcode").value;
+        const address = document.getElementById("sample6_address").value;
+        const detailAddress = document.getElementById("sample6_detailAddress").value;
+        const extraAddress = document.getElementById("sample6_extraAddress").value;
 
         if (!email_check()) {
             email.focus();
@@ -236,7 +239,19 @@
         } else if (!mobile_check()) {
             mobile.focus();
             return false;
-        } else {
+        } else if (postcode.length == 0) {
+            document.getElementById("sample6_postcode").focus();
+            return false;
+        } else if (address.length == 0) {
+            document.getElementById("sample6_address").focus();
+            return false;
+        } else if (detailAddress.length == 0) {
+            document.getElementById("sample6_detailAddress").focus();
+            return false;
+        } else if (extraAddress.length == 0) {
+            document.getElementById("sample6_extraAddress").focus();
+            return false;
+        }else {
             return true;
         }
     }
