@@ -14,7 +14,7 @@ import java.util.List;
 public class BoardDTO {
     private Long id;
     private String boardTitle;
-    private String boardWriter;
+//    private String boardWriter;
     private String boardContents;
     private int boardPrice;
     private int boardAccount;
@@ -22,5 +22,5 @@ public class BoardDTO {
     private Timestamp boardCreatedDate;
     private int fileAttached;
     private List<MultipartFile> boardFile;
-    private Long adminId;
+    private Long memberId;
 }

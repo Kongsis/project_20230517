@@ -140,7 +140,7 @@ public class BoardController {
     public String save(HttpSession session, @ModelAttribute BoardDTO boardDTO) throws IOException {
         String loginEmail = (String) session.getAttribute("loginEmail");
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
-        boardDTO.setAdminId(memberDTO.getId());
+        boardDTO.setMemberId(memberDTO.getId());
         boardService.save(boardDTO);
         return "redirect:/";
     }

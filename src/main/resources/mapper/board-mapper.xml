@@ -4,8 +4,8 @@
 
 <mapper namespace="Board">
     <insert id="save" parameterType="board" useGeneratedKeys="true" keyProperty="id">
-        insert into board_table(boardTitle, boardWriter, boardContents, fileAttached, memberId)
-        values (#{boardTitle}, #{boardWriter}, #{boardContents}, #{fileAttached}, #{memberId})
+        insert into board_table(boardTitle, boardContents, fileAttached, memberId)
+        values (#{boardTitle}, #{boardContents}, #{fileAttached}, #{memberId})
     </insert>
 
     <insert id="saveFile" parameterType="boardFile">
