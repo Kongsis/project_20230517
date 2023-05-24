@@ -19,136 +19,162 @@
 <%@include file="../component/header.jsp"%>
 <%@include file="../component/nav.jsp"%>
 <div id="section">
+    <div class="login-name">
+        <c:if test="${sessionScope.loginEmail == 'admin'}">
+            <button onclick="board_update('${board.id}')">수정</button>
+            <button onclick="board_delete('${board.id}')">삭제</button>
+        </c:if>
+    </div>
+    <h2>상세조회</h2>
     <table>
         <tr>
-            <th>글번호</th>
+            <th>상품번호</th>
             <td>${board.id}</td>
+        </tr>
         <tr>
-            <th>제목</th>
+            <th>이미지</th>
+            <td>
+                <c:forEach items="${boardFileList}" var="boardFile">
+                    <c:if test="${board.fileAttached ==1 }">
+                        <img src="${pageContext.request.contextPath}/upload/${boardFile.storedFileName}"
+                             alt="" width="150" height="150">
+                    </c:if>
+                </c:forEach>
+            </td>
+        </tr>
+        <tr>
+            <th>상품명</th>
             <td>${board.boardTitle}</td>
         </tr>
         <tr>
-            <th>작성자</th>
-            <td>${board.boardWriter}</td>
+            <th>상품가격</th>
+            <td>${board.boardPrice}</td>
         </tr>
         <tr>
-            <th>내용</th>
+            <th>남은갯수</th>
+            <td>${board.boardAccount}</td>
+        </tr>
+        <tr>
+            <th>상품소개</th>
             <td>${board.boardContents}</td>
+        </tr>
+        <tr>
+            <th>작성시간</th>
+            <td>
+                <fmt:formatDate value="${board.boardCreatedDate}" pattern="yyyy-MM-dd hh:mm:ss"></fmt:formatDate>
+            </td>
         </tr>
         <tr>
             <th>조회수</th>
             <td>${board.boardHits}</td>
         </tr>
-        <tr>
-            <th>작성시간</th>
-            <td>
-                <fmt:formatDate value="${board.boardCreatedDate}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
-            </td>
-        </tr>
-        <c:if test="${board.fileAttached == 1}">
-            <tr>
-                <th>첨부파일</th>
-                <td>
-                    <c:forEach items="${boardFileList}" var="boardFile">
-                        <img src="${pageContext.request.contextPath}/upload/${boardFile.storedFileName}"
-                             alt="" width="150" height="150">
-                    </c:forEach>
-                </td>
-            </tr>
-        </c:if>
     </table>
+
     <button onclick="board_list()">목록</button>
-    <button onclick="board_update()">수정</button>
-    <button onclick="board_delete()">삭제</button>
-    <div id="comment-write-area">
-        <input type="text" id="comment-writer" placeholder="댓글 작성자">
-        <input type="text" id="comment-contents" placeholder="댓글 내용">
-        <button onclick="comment_write()">댓글작성</button>
-    </div>
-    <div id="comment-list">
-        <c:choose>
-            <c:when test="${commentList == null}">
-                <h2>작성된 댓글이 없습니다.</h2>
-            </c:when>
-            <c:otherwise>
-                <table>
-                    <tr>
-                        <th>id</th>
-                        <th>작성자</th>
-                        <th>내용</th>
-                        <th>작성시간</th>
-                    </tr>
-                    <c:forEach items="${commentList}" var="comment">
-                        <tr>
-                            <td>${comment.id}</td>
-                            <td>${comment.commentWriter}</td>
-                            <td>${comment.commentContents}</td>
-                            <td>
-                                <fmt:formatDate value="${comment.commentCreatedDate}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                </table>
-            </c:otherwise>
-        </c:choose>
-    </div>
-</div>
+    <button class="btn btn-default btn-order">주문하기</button>
+    <button class="btn btn-default btn-cart">장바구니</button>
+    <button class="btn btn-default btn-wishlist">위시리스트</button>
+
+
+    <br><br>
+    <h2>──────────────────────────────────────────────────────────────────────────────────────────────</h2> <br><br>
 <%@include file="../component/footer.jsp" %>
 </body>
 <script>
-    const comment_write = () => {
-        const commentWriter = document.getElementById("comment-writer").value;
-        const commentContents = document.getElementById("comment-contents").value;
-        const boardId = '${board.id}';
-        const result = document.getElementById("comment-list");
-        $.ajax({
-            type: "post",
-            url: "/comment/save",
-            data: {
-                "commentWriter": commentWriter,
-                "commentContents": commentContents,
-                "boardId": boardId
-            },
-            success: function (res) {
-                console.log(res);
-                let output = "<table>";
-                output += "<tr>";
-                output += "<th>id</th>";
-                output += "<th>작성자</th>";
-                output += "<th>내용</th>";
-                output += "<th>작성시간</th>";
-                output += "</tr>";
-                for(let i in res) {
-                    output += "<tr>";
-                    output += "<td>" + res[i].id + "</td>";
-                    output += "<td>" + res[i].commentWriter + "</td>";
-                    output += "<td>" + res[i].commentContents + "</td>";
-                    output += "<td>" + moment(res[i].commentCreatedDate).format("YYYY-MM-DD HH:mm:ss") + "</td>";
-                    output += "</tr>";
-                }
-                output += "</table>";
-                result.innerHTML = output;
-                document.getElementById("comment-writer").value = "";
-                document.getElementById("comment-contents").value = "";
-            },
-            error: function () {
-                console.log("실패");
-            }
-        });
-    }
-    const board_list = () => {
-        const type = '${type}';
-        const q = '${q}';
-        const page = '${page}';
-        location.href = "/board/paging?page=" + page + "&type=" + type + "&q=" + q;
-    }
-    const board_update = () => {
+    <%--const comment_write = () => {--%>
+    <%--    const commentWriter = document.getElementById("comment-writer").value;--%>
+    <%--    const commentContents = document.getElementById("comment-contents").value;--%>
+    <%--    const boardId = '${board.id}';--%>
+    <%--    const result = document.getElementById("comment-list");--%>
+    <%--    $.ajax({--%>
+    <%--        type: "post",--%>
+    <%--        url: "/comment/save",--%>
+    <%--        data: {--%>
+    <%--            "commentWriter": commentWriter,--%>
+    <%--            "commentContents": commentContents,--%>
+    <%--            "boardId": boardId--%>
+    <%--        },--%>
+    <%--        success: function (res) {--%>
+    <%--            console.log(res);--%>
+    <%--            let output = "<table>";--%>
+    <%--            output += "<tr>";--%>
+    <%--            output += "<th>id</th>";--%>
+    <%--            output += "<th>작성자</th>";--%>
+    <%--            output += "<th>내용</th>";--%>
+    <%--            output += "<th>작성시간</th>";--%>
+    <%--            output += "</tr>";--%>
+    <%--            for(let i in res) {--%>
+    <%--                output += "<tr>";--%>
+    <%--                output += "<td>" + res[i].id + "</td>";--%>
+    <%--                output += "<td>" + res[i].commentWriter + "</td>";--%>
+    <%--                output += "<td>" + res[i].commentContents + "</td>";--%>
+    <%--                output += "<td>" + moment(res[i].commentCreatedDate).format("YYYY-MM-DD HH:mm:ss") + "</td>";--%>
+    <%--                output += "</tr>";--%>
+    <%--            }--%>
+    <%--            output += "</table>";--%>
+    <%--            result.innerHTML = output;--%>
+    <%--            document.getElementById("comment-writer").value = "";--%>
+    <%--            document.getElementById("comment-contents").value = "";--%>
+    <%--        },--%>
+    <%--        error: function () {--%>
+    <%--            console.log("실패");--%>
+    <%--        }--%>
+    <%--    });--%>
+    <%--}--%>
+    <%--const board_list = () => {--%>
+    <%--    const type = '${type}';--%>
+    <%--    const q = '${q}';--%>
+    <%--    const page = '${page}';--%>
+    <%--    location.href = "/board/paging?page=" + page + "&type=" + type + "&q=" + q;--%>
+    <%--}--%>
+    <%--const board_update = () => {--%>
+    <%--    const id = '${board.id}';--%>
+    <%--    location.href = "/board/update?id=" + id;--%>
+    <%--}--%>
+    <%--const board_delete = () => {--%>
+    <%--    const id = '${board.id}';--%>
+    <%--    location.href = "/board/delete-check?id=" + id;--%>
+    <%--}--%>
+        const board_update = () => {
         const id = '${board.id}';
         location.href = "/board/update?id=" + id;
     }
-    const board_delete = () => {
+        const board_delete = () => {
         const id = '${board.id}';
-        location.href = "/board/delete-check?id=" + id;
+        location.href = "/board/DeletePass?id=" + id;
     }
+        const board_list = () => {
+        const type = '${type}';
+        const q = '${q}';
+        const page = '${page}'
+        location.href = "/board/paging?page=" + page + "&type=" + type + "&q=" + q;
+    }
+        $(".btn-order").click(function () {
+        location.assign("/order/cart");
+    });
+        $(".btn-cart").click(function() {
+        $.ajax({
+            type : "post",
+            url : "/order/cart/" + boardId,
+            data : {
+                boardId : boardId
+            },
+            dataType : "text",
+            success : function(result) {
+                if (result.trim() == 'add_success') {
+                    var check = confirm("카트에 등록되었습니다.");
+                    if (check) {
+                        location.assign("/order/mycart/" + userid);
+                    }
+                } else if (result.trim() == 'already_existed') {
+                    alert("이미 카트에 등록된 상품입니다.");
+                }
+            }
+        });
+    });
+        $(".btn-wishlist").click(function () {
+        alert("상품을 위시리스트에 추가하였습니다.");
+    });
+
 </script>
 </html>
