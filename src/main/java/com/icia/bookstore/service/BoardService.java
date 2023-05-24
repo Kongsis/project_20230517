@@ -2,6 +2,7 @@ package com.icia.bookstore.service;
 
 import com.icia.bookstore.dto.BoardDTO;
 import com.icia.bookstore.dto.BoardFileDTO;
+import com.icia.bookstore.dto.PageDTO;
 import com.icia.bookstore.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
