@@ -196,15 +196,6 @@ public class BoardController {
             List<BoardFileDTO> boardFileDTO = boardService.findFile(id);
             model.addAttribute("boardFileList", boardFileDTO);
         }
-//        List<CommentDTO> commentDTOList = commentService.findAll(id);
-//        if (commentDTOList.size() == 0) {
-//            //댓글이 없으면 list에 null적용
-//            model.addAttribute("commentList", null);
-//        } else {
-//            //댓글이 있으면 서버에서 가져온 commentDTOList를 넘겨준다
-//            model.addAttribute("commentList", commentDTOList);
-//            System.out.println("야야야commentDTOList = " + commentDTOList);
-//        }
         return "boardPages/boardDetail";
     }
     @GetMapping("/update")

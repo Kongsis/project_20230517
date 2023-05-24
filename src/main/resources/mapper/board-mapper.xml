@@ -13,7 +13,7 @@
         values (#{originalFileName}, #{storedFileName}, #{boardId})
     </insert>
     <select id="findAll" resultType="board">
-        select * from board_table
+        select * from board_table order by boardHits desc
     </select>
 
     <select id="findById" resultType="board" parameterType="Long">
@@ -51,5 +51,14 @@
 
     <select id="search" parameterType="java.util.HashMap" resultType="board">
         select * from board_table where ${type} like concat('%', #{q}, '%') order by id desc limit #{start}, #{limit}
+    </select>
+
+    <select id="searchList" parameterType="java.util.HashMap" resultType="boardImg">
+        select *
+        from board_table p,
+             board_file_table f
+        where f.boardId = p.id
+          and ${type} like concat('%', #{q}, '%')
+        order by p.id = f.boardId desc, boardHits desc limit #{start}, #{limit}
     </select>
 </mapper>
