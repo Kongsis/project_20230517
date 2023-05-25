@@ -14,6 +14,9 @@
             <li>
                 <a href="/member/login">로그인</a>
             </li>
+            <li>
+                <a href="/product/paging" class="left1">상품목록</a>
+            </li>
             <li class="login-name" id="login-area">
             <li class="login-name">
                 <c:choose>

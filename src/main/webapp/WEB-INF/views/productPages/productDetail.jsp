@@ -21,22 +21,22 @@
 <div id="section">
     <div class="login-name">
         <c:if test="${sessionScope.loginEmail == 'admin'}">
-            <button onclick="board_update('${board.id}')">수정</button>
-            <button onclick="board_delete('${board.id}')">삭제</button>
+            <button onclick="product_update('${product.id}')">수정</button>
+            <button onclick="product_delete('${product.id}')">삭제</button>
         </c:if>
     </div>
     <h2>상세조회</h2>
     <table>
         <tr>
             <th>상품번호</th>
-            <td>${board.id}</td>
+            <td>${product.id}</td>
         </tr>
         <tr>
             <th>이미지</th>
             <td>
-                <c:forEach items="${boardFileList}" var="boardFile">
-                    <c:if test="${board.fileAttached ==1 }">
-                        <img src="${pageContext.request.contextPath}/upload/${boardFile.storedFileName}"
+                <c:forEach items="${productFileList}" var="productFile">
+                    <c:if test="${product.fileAttached ==1 }">
+                        <img src="${pageContext.request.contextPath}/upload/${productFile.storedFileName}"
                              alt="" width="150" height="150">
                     </c:if>
                 </c:forEach>
@@ -44,33 +44,33 @@
         </tr>
         <tr>
             <th>상품명</th>
-            <td>${board.boardTitle}</td>
+            <td>${product.productTitle}</td>
         </tr>
         <tr>
             <th>상품가격</th>
-            <td>${board.boardPrice}</td>
+            <td>${product.productPrice}</td>
         </tr>
         <tr>
-            <th>남은갯수</th>
-            <td>${board.boardAccount}</td>
+            <th>남은 갯수</th>
+            <td>${product.productQuantity}</td>
         </tr>
         <tr>
             <th>상품소개</th>
-            <td>${board.boardContents}</td>
+            <td>${product.productContents}</td>
         </tr>
         <tr>
             <th>작성시간</th>
             <td>
-                <fmt:formatDate value="${board.boardCreatedDate}" pattern="yyyy-MM-dd hh:mm:ss"></fmt:formatDate>
+                <fmt:formatDate value="${product.productCreatedDate}" pattern="yyyy-MM-dd hh:mm:ss"></fmt:formatDate>
             </td>
         </tr>
         <tr>
             <th>조회수</th>
-            <td>${board.boardHits}</td>
+            <td>${product.productHits}</td>
         </tr>
     </table>
 
-    <button onclick="board_list()">목록</button>
+    <button onclick="product_list()">목록</button>
     <button class="btn btn-default btn-order">주문하기</button>
     <button class="btn btn-default btn-cart">장바구니</button>
     <button class="btn btn-default btn-wishlist">위시리스트</button>
@@ -81,29 +81,29 @@
 <%@include file="../component/footer.jsp" %>
 </body>
 <script>
-    const board_update = () => {
-        const id = '${board.id}';
-        location.href = "/board/update?id=" + id;
+    const product_update = () => {
+        const id = '${product.id}';
+        location.href = "/product/update?id=" + id;
     }
-    const board_delete = () => {
-        const id = '${board.id}';
-        location.href = "/board/DeletePass?id=" + id;
+    const product_delete = () => {
+        const id = '${product.id}';
+        location.href = "/product/DeletePass?id=" + id;
     }
-    const board_list = () => {
+    const product_list = () => {
         const type = '${type}';
         const q = '${q}';
         const page = '${page}'
-        location.href = "/board/paging?page=" + page + "&type=" + type + "&q=" + q;
+        location.href = "/product/paging?page=" + page + "&type=" + type + "&q=" + q;
     }
-        $(".btn-order").click(function () {
+    $(".btn-order").click(function () {
         location.assign("/order/cart");
     });
-        $(".btn-cart").click(function() {
+    $(".btn-cart").click(function() {
         $.ajax({
             type : "post",
-            url : "/order/cart/" + boardId,
+            url : "/order/cart/" + productId,
             data : {
-                boardId : boardId
+                productId : productId
             },
             dataType : "text",
             success : function(result) {
@@ -118,9 +118,8 @@
             }
         });
     });
-        $(".btn-wishlist").click(function () {
+    $(".btn-wishlist").click(function () {
         alert("상품을 위시리스트에 추가하였습니다.");
     });
-
 </script>
 </html>

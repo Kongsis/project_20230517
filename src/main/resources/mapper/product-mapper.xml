@@ -29,7 +29,7 @@
         delete from product_table where id = #{id}
     </delete>
 
-    <update id="update" parameterType="board">
+    <update id="update" parameterType="product">
         update product_table set productTitle = #{productTitle}, productContents = #{productContents},
                                  productPrice=#{productPrice}, productQuantity=#{productQuantity}
         where id = #{id}

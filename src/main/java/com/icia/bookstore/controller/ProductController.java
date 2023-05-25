@@ -23,7 +23,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/productSave")
+    @GetMapping("/save")
     public String productForm(HttpSession session, Model model) {
         String loginEmail = (String) session.getAttribute("loginEmail");
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
@@ -31,7 +31,7 @@ public class ProductController {
         return "productPages/productSave";
     }
 
-    @PostMapping("/productSave")
+    @PostMapping("/save")
     public String productSave(HttpSession session, @ModelAttribute ProductDTO productDTO) throws IOException {
         String loginEmail = (String) session.getAttribute("loginEmail");
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
@@ -40,11 +40,11 @@ public class ProductController {
         return "redirect:/";
     }
 
-    @GetMapping("/productList")
+    @GetMapping("/list")
     public String productList(Model model) {
         List<ProductDTO> productDTOList = productService.findAll();
-        model.addAttribute("productlist", productDTOList);
-        return "productPages/ProductList";
+        model.addAttribute("productList", productDTOList);
+        return "productPages/productList";
     }
 
     @GetMapping("/paging")
@@ -68,7 +68,7 @@ public class ProductController {
         model.addAttribute("paging", pageDTO);
         model.addAttribute("q", q);
         model.addAttribute("type", type);
-        return "productPages/ProductPaging";
+        return "productPages/productPaging";
     }
 
     @GetMapping("/detail")
@@ -85,14 +85,14 @@ public class ProductController {
             List<ProductFileDTO> productFileDTO = productService.findFile(id);
             model.addAttribute("productFileList", productFileDTO);
         }
-        return "productPages/ProductDetail";
+        return "productPages/productDetail";
     }
 
     @GetMapping("/update")
     public String updateForm(@RequestParam("id") Long id, Model model) {
         ProductDTO productDTO = productService.findById(id);
         model.addAttribute("product", productDTO);
-        return "productPages/ProductUpdate";
+        return "productPages/productUpdate";
     }
 
     @PostMapping("/update")
@@ -100,7 +100,7 @@ public class ProductController {
         productService.update(productDTO);
         ProductDTO dto = productService.findById(productDTO.getId());
         model.addAttribute("product", dto);
-        return "productPages/ProductDetail";
+        return "productPages/productDetail";
     }
 
     @GetMapping("/DeletePass")
