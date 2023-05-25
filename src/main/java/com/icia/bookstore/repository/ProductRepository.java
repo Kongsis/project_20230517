@@ -33,7 +33,6 @@ public class ProductRepository {
         sql.update("Product.updateHits", id);
     }
     public ProductDTO findById(Long id) {
-        System.out.println("레포짓 id = " + id);
         return sql.selectOne("Product.findById", id);
     }
     public List<ProductFileDTO> findFile(Long memberId) {

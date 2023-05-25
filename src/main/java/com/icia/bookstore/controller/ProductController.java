@@ -62,9 +62,7 @@ public class ProductController {
             productDTOList = productService.searchList(page, type, q);
             pageDTO = productService.pagingSearchParam(page, type, q);
         }
-        // 페이지에 들어가는 글 목록들
         model.addAttribute("productList", productDTOList);
-        // 하단에 보여줄 페이지 목록들
         model.addAttribute("paging", pageDTO);
         model.addAttribute("q", q);
         model.addAttribute("type", type);
