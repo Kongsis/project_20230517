@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Member;
+import java.util.List;
 
 @Service
 public class MemberService {
@@ -31,6 +32,10 @@ public class MemberService {
 
     public void update(MemberDTO memberDTO) {
         memberRepository.update(memberDTO);
+    }
+
+    public List<MemberDTO> findAll() {
+        return memberRepository.findAll();
     }
 
     public MemberDTO findById(Long id) {

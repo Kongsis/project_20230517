@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("/member")
@@ -65,6 +66,21 @@ public class MemberController {
         MemberDTO memberDTO = memberService.findByMemberEmail(loginEmail);
         model.addAttribute("member", memberDTO);
         return "/memberPages/memberMypage";
+    }
+
+    @GetMapping("/list")
+    public String findAll(Model model) {
+        List<MemberDTO> memberDTOList = memberService.findAll();
+        for(MemberDTO memberDTO : memberDTOList) {
+        }
+        model.addAttribute("memberList", memberDTOList);
+        return "/memberPages/memberList";
+    }
+    @GetMapping("/detail")
+    public String findById(@RequestParam("id") Long id, Model model) {
+        MemberDTO memberDTO = memberService.findById(id);
+        model.addAttribute("member", memberDTO);
+        return "/memberPages/memberDetail";
     }
 
     @GetMapping("/updatePassword")

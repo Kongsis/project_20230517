@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <th>이미지</th>
-            <td>
+            <td rowspan="6">
                 <c:forEach items="${productFileList}" var="productFile">
                     <c:if test="${product.fileAttached ==1 }">
                         <img src="${pageContext.request.contextPath}/upload/${productFile.storedFileName}"

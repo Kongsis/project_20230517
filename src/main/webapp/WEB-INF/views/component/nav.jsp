@@ -31,7 +31,7 @@
             </li>
             <li class="login-name">
                 <c:if test="${sessionScope.loginEmail == 'admin'}">
-                    <a href="/member/manager">회원리스트</a>
+                    <a href="/member/list">회원리스트</a>
                     <a href="/product/save">상품등록</a>
                     <a href="/product/paging" class="left1">상품목록</a>
                 </c:if>

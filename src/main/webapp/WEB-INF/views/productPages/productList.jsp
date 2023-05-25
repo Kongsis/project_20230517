@@ -44,7 +44,6 @@
                     <h1><a href="/product/detail?id=+${product.id}&page=${paging.page}&q=${q}&type=${type}"> ${product.productTitle}</a></h1>
                     <p class="price">${String.format("%,d", product.productPrice)}원</p>
                     <p>${product.productContents}</p>
-
                 </div>
             </c:forEach>
         </table>
