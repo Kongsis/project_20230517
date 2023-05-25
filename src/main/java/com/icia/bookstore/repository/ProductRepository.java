@@ -52,4 +52,12 @@ public class ProductRepository {
     public int productSearchCount(Map<String, Object> pagingParams) {
         return sql.selectOne("Product.searchCount", pagingParams);
     }
+
+//    public List<ProductFileDTO> getArticlePictures(Long id) {
+//        return sql.selectList("Product.getArticlePictures",id);
+//    }
+//
+//    public void deletePicture(Long id) {
+//        sql.delete("Product.deletePicture",id);
+//    }
 }

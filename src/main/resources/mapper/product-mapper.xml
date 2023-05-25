@@ -29,11 +29,25 @@
         delete from product_table where id = #{id}
     </delete>
 
-    <update id="update" parameterType="product">
-        update product_table set productTitle = #{productTitle}, productContents = #{productContents},
-                                 productPrice=#{productPrice}, productQuantity=#{productQuantity}
-        where id = #{id}
+<!--    <update id="update" parameterType="product">-->
+<!--        update product_table set productTitle = #{productTitle}, productContents = #{productContents},-->
+<!--                                 productPrice=#{productPrice}, productQuantity=#{productQuantity}-->
+<!--        where id = #{id}-->
+<!--    </update>-->
+
+    <update id="update" parameterType="product" useGeneratedKeys="true" keyProperty="id">
+        update product_table set productTitle=#{productTitle}, productContents=#{productContents},
+                                 productPrice=#{productPrice}, productQuantity=#{productQuantity},
+                                 fileAttached=#{fileAttached} where id=#{id}
     </update>
+
+    <select id="getArticlePictures" resultType="productFile">
+        select *from product_file_table where productId=#{productId}
+    </select>
+
+    <delete id="deletePicture" parameterType="Long">
+        delete from product_file_table where id=#{id}
+    </delete>
 
     <select id="findFile" parameterType="Long" resultType="productFile">
         select * from product_file_table where productId = #{productId}
