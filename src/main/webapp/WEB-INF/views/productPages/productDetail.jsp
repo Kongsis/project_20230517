@@ -81,69 +81,15 @@
 <%@include file="../component/footer.jsp" %>
 </body>
 <script>
-    <%--const comment_write = () => {--%>
-    <%--    const commentWriter = document.getElementById("comment-writer").value;--%>
-    <%--    const commentContents = document.getElementById("comment-contents").value;--%>
-    <%--    const boardId = '${board.id}';--%>
-    <%--    const result = document.getElementById("comment-list");--%>
-    <%--    $.ajax({--%>
-    <%--        type: "post",--%>
-    <%--        url: "/comment/save",--%>
-    <%--        data: {--%>
-    <%--            "commentWriter": commentWriter,--%>
-    <%--            "commentContents": commentContents,--%>
-    <%--            "boardId": boardId--%>
-    <%--        },--%>
-    <%--        success: function (res) {--%>
-    <%--            console.log(res);--%>
-    <%--            let output = "<table>";--%>
-    <%--            output += "<tr>";--%>
-    <%--            output += "<th>id</th>";--%>
-    <%--            output += "<th>작성자</th>";--%>
-    <%--            output += "<th>내용</th>";--%>
-    <%--            output += "<th>작성시간</th>";--%>
-    <%--            output += "</tr>";--%>
-    <%--            for(let i in res) {--%>
-    <%--                output += "<tr>";--%>
-    <%--                output += "<td>" + res[i].id + "</td>";--%>
-    <%--                output += "<td>" + res[i].commentWriter + "</td>";--%>
-    <%--                output += "<td>" + res[i].commentContents + "</td>";--%>
-    <%--                output += "<td>" + moment(res[i].commentCreatedDate).format("YYYY-MM-DD HH:mm:ss") + "</td>";--%>
-    <%--                output += "</tr>";--%>
-    <%--            }--%>
-    <%--            output += "</table>";--%>
-    <%--            result.innerHTML = output;--%>
-    <%--            document.getElementById("comment-writer").value = "";--%>
-    <%--            document.getElementById("comment-contents").value = "";--%>
-    <%--        },--%>
-    <%--        error: function () {--%>
-    <%--            console.log("실패");--%>
-    <%--        }--%>
-    <%--    });--%>
-    <%--}--%>
-    <%--const board_list = () => {--%>
-    <%--    const type = '${type}';--%>
-    <%--    const q = '${q}';--%>
-    <%--    const page = '${page}';--%>
-    <%--    location.href = "/board/paging?page=" + page + "&type=" + type + "&q=" + q;--%>
-    <%--}--%>
-    <%--const board_update = () => {--%>
-    <%--    const id = '${board.id}';--%>
-    <%--    location.href = "/board/update?id=" + id;--%>
-    <%--}--%>
-    <%--const board_delete = () => {--%>
-    <%--    const id = '${board.id}';--%>
-    <%--    location.href = "/board/delete-check?id=" + id;--%>
-    <%--}--%>
-        const board_update = () => {
+    const board_update = () => {
         const id = '${board.id}';
         location.href = "/board/update?id=" + id;
     }
-        const board_delete = () => {
+    const board_delete = () => {
         const id = '${board.id}';
         location.href = "/board/DeletePass?id=" + id;
     }
-        const board_list = () => {
+    const board_list = () => {
         const type = '${type}';
         const q = '${q}';
         const page = '${page}'
