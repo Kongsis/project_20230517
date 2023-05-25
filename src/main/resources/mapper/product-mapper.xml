@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Product">
+    <insert id="save" parameterType="product" useGeneratedKeys="true" keyProperty="id">
+        insert into product_table(memberId, productTitle, productContents, productPrice, productQuantity, fileAttached)
+        values (#{memberId}, #{productTitle}, #{productContents}, #{productPrice}, #{productQuantity}, #{fileAttached})
+    </insert>
+
+    <insert id="saveFile" parameterType="productFile">
+        insert into product_file_table(originalFileName, storedFileName, productId)
+        values (#{originalFileName}, #{storedFileName}, #{productId})
+    </insert>
+
+    <select id="findAll" resultType="product">
+        select * from product_table order by productHits desc
+    </select>
+
+    <select id="findById" resultType="product" parameterType="Long">
+        select * from product_table where id = #{id}
+    </select>
+
+    <update id="updateHits" parameterType="Long">
+        update product_table set productHits = productHits+1 where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        delete from product_table where id = #{id}
+    </delete>
+
+    <update id="update" parameterType="board">
+        update product_table set productTitle = #{productTitle}, productContents = #{productContents},
+                                 productPrice=#{productPrice}, productQuantity=#{productQuantity}
+        where id = #{id}
+    </update>
+
+    <select id="findFile" parameterType="Long" resultType="productFile">
+        select * from product_file_table where productId = #{productId}
+    </select>
+
+    <select id="paging" parameterType="java.util.HashMap" resultType="productImg">
+        select *
+        from product_table p,
+             product_file_table f
+        where p.id = f.productId
+          and p.id = productId
+        order by p.id desc Limit #{start}, #{Limit}
+    </select>
+
+    <select id="count" resultType="Integer">
+        select count(id) from product_table
+    </select>
+
+    <select id="searchCount" parameterType="java.util.HashMap" resultType="Integer">
+        select count(id) from product_table where ${type} like concat('%', #{q}, '%')
+    </select>
+
+    <select id="search" parameterType="java.util.HashMap" resultType="product">
+        select * from product_table where ${type} like concat('%', #{q}, '%') order by id desc limit #{start}, #{limit}
+    </select>
+
+    <select id="searchList" parameterType="java.util.HashMap" resultType="productImg">
+        select *
+        from product_table p,
+             product_file_table f
+        where f.productId = p.id
+          and ${type} like concat('%', #{q}, '%')
+        order by p.id = f.productId desc, productHits desc limit #{start}, #{limit}
+    </select>
+</mapper>

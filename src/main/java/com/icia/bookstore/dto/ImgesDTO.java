@@ -9,11 +9,11 @@ import lombok.ToString;
 @ToString
 public class ImgesDTO {
     private Long id;
-    private Long boardId;
-    private String boardTitle;
-    private int boardCnt; // 갯수
-    private int boardPrice;
-    private String boardContents;
+    private Long productsId;
+    private String productTitle;
+    private int productCnt; // 갯수
+    private int productPrice;
+    private String productContents;
     private int fileAttached;
     private String originalFileName;
     private String storedFileName;

@@ -4,8 +4,8 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.icia.bookstore.dto.MemberDTO" alias="member"></typeAlias>
-        <typeAlias type="com.icia.bookstore.dto.BoardDTO" alias="board"></typeAlias>
-        <typeAlias type="com.icia.bookstore.dto.BoardFileDTO" alias="boardFile"></typeAlias>
+        <typeAlias type="com.icia.bookstore.dto.ProductDTO" alias="product"></typeAlias>
+        <typeAlias type="com.icia.bookstore.dto.ProductFileDTO" alias="productFile"></typeAlias>
         <typeAlias type="com.icia.bookstore.dto.CommentDTO" alias="comment"></typeAlias>
     </typeAliases>
 </configuration>

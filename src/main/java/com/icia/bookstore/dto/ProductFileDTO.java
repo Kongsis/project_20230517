@@ -7,9 +7,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class BoardFileDTO {
+public class ProductFileDTO {
     private Long id;
     private String originalFileName;
     private String storedFileName;
-    private Long boardId;
+    private Long productId;
 }

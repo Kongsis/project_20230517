@@ -11,16 +11,15 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class BoardDTO {
+public class ProductDTO {
     private Long id;
-    private String boardTitle;
-//    private String boardWriter;
-    private String boardContents;
-    private int boardPrice;
-    private int boardAccount;
-    private int boardHits;
-    private Timestamp boardCreatedDate;
+    private String productTitle;
+    private String productContents;
+    private int productPrice;
+    private int productQuantity;
+    private int productHits;
+    private Timestamp productCreatedDate;
     private int fileAttached;
-    private List<MultipartFile> boardFile;
+    private List<MultipartFile> productFile;
     private Long memberId;
 }
