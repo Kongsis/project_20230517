@@ -25,7 +25,7 @@
             <form action="/product/paging" method="get" enctype="multipart/form-data">
                 <div style="display: inline-block">
                     <select name="type">
-                        <option value="productTitle">제목</option>
+                        <option value="productTitle">상품명</option>
                     </select>
                 </div>
                 <div style="display: inline-block">
