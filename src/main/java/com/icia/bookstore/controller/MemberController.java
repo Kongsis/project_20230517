@@ -130,6 +130,6 @@ public class MemberController {
     @GetMapping("/memberDelete")
     public String deleteManager(@ModelAttribute MemberDTO memberDTO) {
         memberService.memberDelete(memberDTO);
-        return "redirect:/";
+        return "memberPages/memberList";
     }
 }
