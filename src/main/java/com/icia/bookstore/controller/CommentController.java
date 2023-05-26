@@ -22,7 +22,7 @@ public class CommentController {
     @PostMapping("/save")
     public ResponseEntity comment(@RequestBody CommentDTO commentDTO, Model model) {
         commentService.save(commentDTO);
-        List<CommentDTO> commentDTOList = commentService.findAll(commentDTO.getBoardId());
+        List<CommentDTO> commentDTOList = commentService.findAll(commentDTO.getProductId());
         model.addAttribute("commentList", commentDTOList);
         return new ResponseEntity<>(commentDTOList,HttpStatus.OK);
     }

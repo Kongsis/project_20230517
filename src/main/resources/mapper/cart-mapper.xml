@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Cart">
+    <insert id="save" parameterType="comment">
+        insert into comment_table(commentWriter, commentContents, productId)
+        values (#{commentWriter}, #{commentContents}, #{productId})
+    </insert>
+
+    <select id="findAll" parameterType="Long" resultType="comment">
+        select * from comment_table where productId=#{productId} order by id desc
+    </select>
+
+    <select id="findComment" parameterType="Long" resultType="comment">
+        select * from comment_table where productId=#{productId};
+    </select>
+</mapper>

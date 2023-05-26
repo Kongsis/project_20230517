@@ -8,5 +8,6 @@
         <typeAlias type="com.icia.bookstore.dto.ImgesDTO" alias="productImg"></typeAlias>
         <typeAlias type="com.icia.bookstore.dto.ProductFileDTO" alias="productFile"></typeAlias>
         <typeAlias type="com.icia.bookstore.dto.CommentDTO" alias="comment"></typeAlias>
+        <typeAlias type="com.icia.bookstore.dto.CartDTO" alias="cart"></typeAlias>
     </typeAliases>
 </configuration>

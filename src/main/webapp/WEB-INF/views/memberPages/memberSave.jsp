@@ -44,11 +44,6 @@
         </div>
         <br><br>
         <input type="submit" value="가입하기" onclick="member_address()">
-
-<%--        <div class="form-check">--%>
-<%--            <input type="checkbox" name="gender" value="male" class="form-check-input" id="check-box"> 개인정보 수집 및 이용에 동의합니다.(필수)--%>
-<%--        </div><br>--%>
-<%--        <input type="submit" value="가입하기">--%>
     </form>
 </div>
 <%@include file="../component/footer.jsp"%>

@@ -10,8 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="admin-memberDelete">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/CartDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/cart-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cartPages/cartSave.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/CommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productUpdate.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -187,7 +201,7 @@
       <workItem from="1684720316087" duration="3450000" />
       <workItem from="1684886144735" duration="19814000" />
       <workItem from="1684971518871" duration="22521000" />
-      <workItem from="1685058095434" duration="7852000" />
+      <workItem from="1685058095434" duration="15098000" />
     </task>
     <task id="LOCAL-00001" summary="README">
       <created>1684299308936</created>
@@ -420,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685064265164</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="admin-memberDelete">
+      <created>1685069367645</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1685069367645</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

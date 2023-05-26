@@ -15,5 +15,5 @@ public class CommentDTO {
     private String commentContents;
     private Timestamp commentCreatedDate;
     private Long memberId;
-    private Long boardId;
+    private Long productId;
 }
