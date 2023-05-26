@@ -126,4 +126,10 @@ public class MemberController {
         session.invalidate();
         return "redirect:/";
     }
+
+    @GetMapping("/memberDelete")
+    public String deleteManager(@ModelAttribute MemberDTO memberDTO) {
+        memberService.memberDelete(memberDTO);
+        return "redirect:/";
+    }
 }

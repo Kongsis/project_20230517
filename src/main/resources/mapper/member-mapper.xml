@@ -32,4 +32,8 @@
     <delete id="delete" parameterType="member">
         delete from member_table where id = #{id}
     </delete>
+
+    <delete id="memberDelete" parameterType="member">
+        delete from member_table where id = #{id}
+    </delete>
 </mapper>

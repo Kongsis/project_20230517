@@ -21,11 +21,11 @@
     <table>
         <tr>
             <th>id</th>
-            <th>memberEmail</th>
-            <th>memberPassword</th>
-            <th>memberName</th>
-            <th>memberMobile</th>
-            <th>memberAddress</th>
+            <th>이메일</th>
+            <th>비밀번호</th>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>주소</th>
             <th>조회</th>
             <th>수정</th>
             <th>삭제</th>
@@ -55,13 +55,13 @@
 </body>
 <script>
     const detail_member = (id) => {
-        location.href = "/member/detail?id="+id;
+        // location.href = "/member/detail?id="+id;
     }
     const update_member = (id) => {
         // location.href = "/member/update?id="+id;
     }
     const delete_member = (id) => {
-        // location.href = "/member/delete?id="+id;
+        location.href = "/member/memberDelete?id="+id;
     }
 </script>
 </body>

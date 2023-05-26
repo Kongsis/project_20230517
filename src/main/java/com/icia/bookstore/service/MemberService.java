@@ -45,4 +45,8 @@ public class MemberService {
     public void delete(Long id) {
         memberRepository.delete(id);
     }
+
+    public void memberDelete(MemberDTO memberDTO) {
+        memberRepository.memberDelete(memberDTO);
+    }
 }
