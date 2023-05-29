@@ -2,17 +2,53 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+
 <mapper namespace="Cart">
-    <insert id="save" parameterType="comment">
-        insert into comment_table(commentWriter, commentContents, productId)
-        values (#{commentWriter}, #{commentContents}, #{productId})
+
+    <select id="countCart" parameterType="java.util.Map" resultType="int">
+        select count(*) from cart_table where memberId = #{memberId} and productId = #{productId}
+    </select>
+
+    <update id="updateCart" parameterType="cart">
+        update cart_table set productCnt = productCnt + #{productCnt} where memberId = #{memberId} and productId = #{productId}
+    </update>
+
+    <insert id="insert" parameterType="cart">
+        insert into cart_table(memberId, productId, productCnt) values (#{memberId}, #{productId}, #{productCnt})
     </insert>
 
-    <select id="findAll" parameterType="Long" resultType="comment">
-        select * from comment_table where productId=#{productId} order by id desc
+    <select id="listCart" parameterType="Long" resultType="cart">
+        select c.id,
+               c.memberId,
+               c.productId,
+               m.memberName,
+               p.productTitle,
+               c.productCnt,
+               p.productPrice,
+               (p.productPrice * c.productCnt) money
+        from smember_table m,
+             product_table p,
+             cart_table c
+        where m.id = c.memberId
+          and p.id = c.productId
+          and c.memberId = #{memberId}
+        order by c.id
     </select>
 
-    <select id="findComment" parameterType="Long" resultType="comment">
-        select * from comment_table where productId=#{productId};
+    <select id="sumMoney" parameterType="Long" resultType="int">
+        SELECT COALESCE(SUM(p.productPrice * c.productCnt), 0) AS money
+        FROM cart_table c,
+             product_table p
+        WHERE c.productId = p.id
+          AND c.memberId = #{memberId}
+
     </select>
+
+    <update id="modifyCart" parameterType="cart">
+        update cart_table set productCnt=#{productCnt} where productId = #{productId} and memberId = #{memberId}
+    </update>
+
+    <delete id="delete" parameterType="long">
+        delete FROM cart_table where id = #{id}
+    </delete>
 </mapper>
