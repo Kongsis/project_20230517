@@ -22,21 +22,6 @@
         ${sessionScope.loginEmail} 님의 회원정보
         <h2>회원 정보</h2>
         <table>
-<%--            <tr>--%>
-<%--                <th>프로필사진</th>--%>
-<%--                <th>--%>
-<%--                    <c:if test="${member.memberProfile == 1}">--%>
-<%--                        <img src="${pageContext.request.contextPath}/upload/${memberFile.storedFileName}" alt="" width="100"--%>
-<%--                             height="100">--%>
-<%--                    </c:if>--%>
-<%--                    <c:forEach items="${memberFileList}" var="memberFile">--%>
-<%--                        <c:if test="${member.memberProfile ==1 }">--%>
-<%--                            <img src="${pageContext.request.contextPath}/upload/${memberFile.storedFileName}"--%>
-<%--                                 alt="" width="150" height="150">--%>
-<%--                        </c:if>--%>
-<%--                    </c:forEach>--%>
-<%--                </th>--%>
-<%--            </tr>--%>
             <tr>
                 <th>id</th>
                 <th>${member.id}</th>

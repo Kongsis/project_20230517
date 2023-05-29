@@ -22,6 +22,11 @@
             <h6 id="email-reResult"></h6> <br>
             <input type="text" id="password-check" onblur="loginPassword_check()" name="memberPassword" placeholder="비밀번호">
             <h6 id="password-reResult"></h6> <br>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> 아이디/비밀번호 저장하기
+                </label>
+            </div>
             <input type="submit" onclick="login_check()" value="로그인">
         </form>
     </div>

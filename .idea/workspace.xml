@@ -9,37 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="admin-memberDelete">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/CartDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/cart-mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cartPages/cartSave.jsp" afterDir="false" />
+    <list default="true" id="58658c4f-f642-4150-ade6-af2f17840b8a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/dto/CommentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberSave.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/repository/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cartPages/cartSave.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cartPages/cartSave.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberMypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberPages/memberMypage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="spring-beans.schema" />
-        <option value="Jsp File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,42 +39,41 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Pttq8crMf9Ey8ECmV9Ci6jMaHk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QSbTwgfPPmTrRXvmOKO1z1mZLl" />
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/springframework/project_20230517/src/main/webapp/WEB-INF/views/productPages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;347411a46cfafb7edf4705e934afc1b7&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/springframework/project_20230517",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\productPages" />
-      <recent name="D:\springframework\project_20230517\src\main\resources\mapper" />
-      <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\boardPages" />
-      <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\memberPages" />
-      <recent name="D:\springframework\project_20230517\src\main\webapp\WEB-INF\views\response" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.icia.bookstore.dto" />
-      <recent name="com.icia.bookstore.service" />
-      <recent name="com.icia.bookstore.repository" />
-      <recent name="com.icia.bookstore.controller" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.74" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.74" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
@@ -102,9 +86,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="44b1f931-f879-4c40-8b97-c91053753a37" />
-        <option name="HTTP_PORT" value="8090" />
-        <option name="JNDI_PORT" value="1095" />
+        <option name="BASE_DIRECTORY_NAME" value="ced12b54-6954-425b-9e75-1fe885f792a4" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -112,7 +94,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56964" />
+        <option name="DEBUG_PORT" value="55255" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -185,302 +167,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9b9c3750-ca1f-4d88-b109-f6e02bbbb64d" name="Changes" comment="" />
-      <created>1684288395353</created>
+      <changelist id="58658c4f-f642-4150-ade6-af2f17840b8a" name="Changes" comment="" />
+      <created>1685349941688</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684288395353</updated>
-      <workItem from="1684288396410" duration="14573000" />
-      <workItem from="1684368026082" duration="4429000" />
-      <workItem from="1684375776590" duration="57000" />
-      <workItem from="1684375860514" duration="37000" />
-      <workItem from="1684375921223" duration="40000" />
-      <workItem from="1684376903870" duration="13680000" />
-      <workItem from="1684469171540" duration="19842000" />
-      <workItem from="1684712100122" duration="7354000" />
-      <workItem from="1684720316087" duration="3450000" />
-      <workItem from="1684886144735" duration="19814000" />
-      <workItem from="1684971518871" duration="22521000" />
-      <workItem from="1685058095434" duration="15098000" />
+      <updated>1685349941688</updated>
+      <workItem from="1685349943180" duration="6611000" />
     </task>
-    <task id="LOCAL-00001" summary="README">
-      <created>1684299308936</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1684299308936</updated>
-    </task>
-    <task id="LOCAL-00002" summary="README">
-      <created>1684299448922</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1684299448922</updated>
-    </task>
-    <task id="LOCAL-00003" summary="README">
-      <created>1684302602262</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1684302602262</updated>
-    </task>
-    <task id="LOCAL-00004" summary="setting">
-      <created>1684310375785</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1684310375785</updated>
-    </task>
-    <task id="LOCAL-00005" summary="setting">
-      <created>1684371730764</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1684371730764</updated>
-    </task>
-    <task id="LOCAL-00006" summary="setting">
-      <created>1684376997416</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1684376997416</updated>
-    </task>
-    <task id="LOCAL-00007" summary="haha">
-      <created>1684377297874</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1684377297874</updated>
-    </task>
-    <task id="LOCAL-00008" summary="haha">
-      <created>1684377389318</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1684377389318</updated>
-    </task>
-    <task id="LOCAL-00009" summary="member">
-      <created>1684393795203</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1684393795203</updated>
-    </task>
-    <task id="LOCAL-00010" summary="memberPage">
-      <created>1684396607096</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1684396607096</updated>
-    </task>
-    <task id="LOCAL-00011" summary="memberUpdatePage">
-      <created>1684472553983</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1684472553983</updated>
-    </task>
-    <task id="LOCAL-00012" summary="memberDelete">
-      <created>1684482967886</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1684482967886</updated>
-    </task>
-    <task id="LOCAL-00013" summary="memberDelete2">
-      <created>1684495079792</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1684495079792</updated>
-    </task>
-    <task id="LOCAL-00014" summary="memberDelete2">
-      <created>1684496329013</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1684496329013</updated>
-    </task>
-    <task id="LOCAL-00015" summary="memberSave ok">
-      <created>1684714501925</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1684714501925</updated>
-    </task>
-    <task id="LOCAL-00016" summary="productDTO 생성">
-      <created>1684715831461</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1684715831461</updated>
-    </task>
-    <task id="LOCAL-00017" summary="board작성중">
-      <created>1684719906860</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1684719906860</updated>
-    </task>
-    <task id="LOCAL-00018" summary="board작성중">
-      <created>1684720245841</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1684720245841</updated>
-    </task>
-    <task id="LOCAL-00019" summary="board작성중2">
-      <created>1684720551366</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1684720551366</updated>
-    </task>
-    <task id="LOCAL-00020" summary="board작성중3">
-      <created>1684724673731</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1684724673731</updated>
-    </task>
-    <task id="LOCAL-00021" summary="board작성중4">
-      <created>1684896482424</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1684896482424</updated>
-    </task>
-    <task id="LOCAL-00022" summary="board작성중5">
-      <created>1684915294652</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1684915294652</updated>
-    </task>
-    <task id="LOCAL-00023" summary="board작성중5">
-      <created>1684922241687</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1684922241687</updated>
-    </task>
-    <task id="LOCAL-00024" summary="boardDetail 수정중1">
-      <created>1684922687943</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1684922687943</updated>
-    </task>
-    <task id="LOCAL-00025" summary="boardDetail 수정중1">
-      <created>1684922936411</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1684922936411</updated>
-    </task>
-    <task id="LOCAL-00026" summary="수정중1">
-      <created>1684995336838</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1684995336838</updated>
-    </task>
-    <task id="LOCAL-00027" summary="수정중1">
-      <created>1684996721071</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1684996721071</updated>
-    </task>
-    <task id="LOCAL-00028" summary="product1">
-      <created>1685004364821</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1685004364821</updated>
-    </task>
-    <task id="LOCAL-00029" summary="product2">
-      <created>1685004542107</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1685004542108</updated>
-    </task>
-    <task id="LOCAL-00030" summary="product2">
-      <created>1685004855210</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1685004855210</updated>
-    </task>
-    <task id="LOCAL-00031" summary="memberlist 추가">
-      <created>1685009053567</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1685009053567</updated>
-    </task>
-    <task id="LOCAL-00032" summary="첨부파일 기능 수정 중">
-      <created>1685010031883</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1685010031883</updated>
-    </task>
-    <task id="LOCAL-00033" summary="admin-memberDelete">
-      <created>1685064265164</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1685064265164</updated>
-    </task>
-    <task id="LOCAL-00034" summary="admin-memberDelete">
-      <created>1685069367645</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1685069367645</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="README" />
-    <MESSAGE value="setting" />
-    <MESSAGE value="haha" />
-    <MESSAGE value="member" />
-    <MESSAGE value="memberPage" />
-    <MESSAGE value="memberUpdatePage" />
-    <MESSAGE value="memberDelete" />
-    <MESSAGE value="memberDelete2" />
-    <MESSAGE value="memberSave ok" />
-    <MESSAGE value="productDTO 생성" />
-    <MESSAGE value="board작성중" />
-    <MESSAGE value="board작성중2" />
-    <MESSAGE value="board작성중3" />
-    <MESSAGE value="board작성중4" />
-    <MESSAGE value="board작성중5" />
-    <MESSAGE value="boardDetail 수정중1" />
-    <MESSAGE value="수정중1" />
-    <MESSAGE value="product1" />
-    <MESSAGE value="product2" />
-    <MESSAGE value="memberlist 추가" />
-    <MESSAGE value="첨부파일 기능 수정 중" />
-    <MESSAGE value="admin-memberDelete" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin-memberDelete" />
   </component>
 </project>
