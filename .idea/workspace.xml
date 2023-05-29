@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58658c4f-f642-4150-ade6-af2f17840b8a" name="Changes" comment="cart1">
+    <list default="true" id="58658c4f-f642-4150-ade6-af2f17840b8a" name="Changes" comment="cart mapper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/cart-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/cart-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icia/bookstore/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productPages/productDetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685349941688</updated>
-      <workItem from="1685349943180" duration="8206000" />
+      <workItem from="1685349943180" duration="8627000" />
     </task>
     <task id="LOCAL-00001" summary="cart1">
       <created>1685380025031</created>
@@ -173,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685380025031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cart mapper">
+      <created>1685382931938</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685382931938</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +189,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cart1" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart1" />
+    <MESSAGE value="cart mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart mapper" />
   </component>
 </project>
